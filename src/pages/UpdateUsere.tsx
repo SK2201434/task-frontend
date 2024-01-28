@@ -28,7 +28,7 @@ let UpdateUser:React.FC = ()=>{
 
 
     function update():void{
-        axios.put(`http://localhost:5002/updateprofile/${localStorage.getItem('id')}` , {
+        axios.put(`https://task-back-8air.onrender.com/updateprofile/${localStorage.getItem('id')}` , {
             name : productInfo.name ,
             phone : productInfo.phone
         }).then((e)=>{

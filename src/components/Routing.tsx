@@ -44,7 +44,7 @@ let Login = ()=>{
     }
 
     function submit():void{
-        axios.post("http://localhost:5002/loggin" ,  { email : loginUser.email   , password : loginUser.password } ).
+        axios.post("https://task-back-8air.onrender.com/loggin" ,  { email : loginUser.email   , password : loginUser.password } ).
         then((e)=>{
             // console.log(e);
             localStorage.setItem('authTokken', e?.data?.accessToken);
@@ -111,7 +111,7 @@ const Signup = () => {
         event.preventDefault();
         try {
             const { fullName, phoneNumber, email, password } = signupData;
-            await axios.post("http://localhost:5002/creatusers", {
+            await axios.post("https://task-back-8air.onrender.com/creatusers", {
                 name: fullName,
                 phone: phoneNumber,
                 email,

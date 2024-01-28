@@ -44,7 +44,7 @@ let ProductList : React.FC = () =>{
 
   let updateProduct = ()=>{
     // console.log(edit_Product)
-    axios.put(`http://localhost:5002/updateproduct/${edit_Product._id}`,{name : edit_Product.name , description : edit_Product.description}).
+    axios.put(`https://task-back-8air.onrender.com/updateproduct/${edit_Product._id}`,{name : edit_Product.name , description : edit_Product.description}).
     then((event)=>{ 
         getProducts();
         setShowModel(false);
@@ -57,7 +57,7 @@ let ProductList : React.FC = () =>{
 
 
     let getProducts = ():void=>{
-       axios.get("http://localhost:5002/getproducts").
+       axios.get("https://task-back-8air.onrender.com/getproducts").
         then((e)=>{
             setProductsList(e.data.products);
             setTotalProductsList(e.data.products);
@@ -67,7 +67,7 @@ let ProductList : React.FC = () =>{
     }
 
     let deleteProduct = (id : string):void=>{
-        axios.delete(`http://localhost:5002/deleteproduct/${id}`).then((e)=>{
+        axios.delete(`https://task-back-8air.onrender.com/deleteproduct/${id}`).then((e)=>{
             getProducts();
             alert(e.data.message);
         }).catch((err)=>{
