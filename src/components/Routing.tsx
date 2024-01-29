@@ -135,11 +135,11 @@ const Signup = () => {
                         <Form onSubmit={handleSubmit}>
                             <Form.Group className="mb-3">
                                 <Form.Label>Full Name</Form.Label>
-                                <Form.Control type="text" name="fullName" value={signupData.name} onChange={handleChange} />
+                                <Form.Control type="text" name="fullName" value={signupData.fullName} onChange={handleChange} />
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label>Phone Number</Form.Label>
-                                <Form.Control type="text" name="phoneNumber" value={signupData.phone} onChange={handleChange} />
+                                <Form.Control type="text" name="phoneNumber" value={signupData.phoneNumber} onChange={handleChange} />
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label>Email</Form.Label>

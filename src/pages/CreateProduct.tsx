@@ -1,6 +1,6 @@
 
 import axios from "axios";
-import React, { useState , ChangeEvent } from "react";
+import React, { useState , /*ChangeEvent*/ } from "react";
 import {Form , Card , Button } from "react-bootstrap";
 
 let CreateProduct : React.FC = ()=>{
@@ -21,9 +21,10 @@ let CreateProduct : React.FC = ()=>{
 
 
         axios.post('https://task-back-8air.onrender.com/createproduct' , data).then((e)=>{
+            console.log(e)
             
         }).catch((err)=>{
-
+            console.log(err)
         })
     }
 

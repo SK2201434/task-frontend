@@ -38,7 +38,7 @@ let UpdateUser:React.FC = ()=>{
             localStorage.setItem('phone' , e?.data?.user?.phone);
             setProductInfo({...productInfo , 'name' : e?.data?.user?.name , 'phone' : e?.data?.user?.phone});
         }).catch((err)=>{
-
+            console.error(err); 
         })
     }
 
